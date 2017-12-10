@@ -6,3 +6,168 @@
 	  color: white;
 	} 
 }
+
+/* Barre de recherche */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.rechercher {
+  float: left;
+  width: 100%;
+  border: 3px solid #9a2408;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.boutonRecherche {
+  position: absolute;  
+  right: -33px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #9a2408;
+  background: #9a2408;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 28%;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Superposition image/titre */
+
+div.wrapper{
+  float:left; 
+  position:relative; 
+}
+div.description{
+  position:absolute; 
+  bottom:0px; 
+  left:0px;
+  width:100%;
+  background-color:black;
+  color:white;
+  opacity:0.6; 
+  filter:alpha(opacity=60);
+}
+p.contenu{
+  padding:0px;
+  margin:0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+@mixin ligne (){
+    border-color: white;
+    border-width: 0 0 2px;
+    border-style: solid;
+    background: transparent;
+}
+
+@mixin titre (){
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  color: white;
+}
+
+/* Pour les écrans dont la largeur est supérieure à 1200px */
+
+@media screen and (min-width: 1200px) {
+  article {
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #ligne{
+    @include ligne ();
+  }  
+
+  #titre{
+    @include titre ();
+  }
+
+  .bloc{
+    display: inline-block;
+    overflow: hidden;  
+    border-width:1px;
+    border-style:solid;
+    color:#DFDFDF;
+    padding:auto;
+    width:24%; 
+    text-align: center;
+  }
+}
+
+/* Pour les écrans dont la largeur est supérieure à 900px et inférieure à 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  article {
+    margin-top: 15%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #ligne{
+    @include ligne ();
+  }
+
+  #titre{
+    @include titre ();
+  }
+
+  .bloc{
+    display: inline-block;
+    overflow: hidden;  
+    border-width: 1px;
+    border-style: solid;
+    color: #DFDFDF;
+    padding: auto;
+    width: 24%;
+    text-align: center; 
+  }
+}
+
+/* Pour les écrans dont la largeur est inférieure à 900px */
+@media screen and (max-width: 900px) {
+  article {
+    margin-top: 35%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  #titre{
+    @include titre ();
+  }
+
+    #ligne{
+    @include ligne ();
+  }
+
+   
+  .bloc{
+    display: inline-block;
+    margin-left: 0em;
+    overflow: hidden;  
+    border-width: 1px;
+    border-style: solid;
+    color: #DFDFDF;
+    width: 100%;
+    text-align: center; 
+
+  }
+}

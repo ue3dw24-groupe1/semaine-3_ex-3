@@ -1,0 +1,54 @@
+$bl: #FFFFFF;
+$gris: #404040;
+
+@mixin titre ($size){
+	font-size: $size;
+	color:$bl;
+	text-align:center;
+}
+
+footer{
+	background-color: $gris;
+	color: $bl;
+	margin-top: 10%;
+	height:100%;
+	width: 100%;
+	left:50%;
+	right: 0;
+
+	.col1{
+		float:left;
+		border-right:1px solid $bl;
+		padding:4px 4px 4px 4px;
+		width: 50%;
+		height: 100%;
+		h3{
+			@include titre (1.6em);
+		}
+		h4{
+			@include titre (1.2em);
+		}
+		.fa{
+			margin-right:10px;
+		}
+	}
+	.col2{
+		float:right;
+		padding:4px 4px 4px 4px;
+		width: 50%;
+		height: 100%;
+		h3{
+			@include titre (1.6em);
+		}
+		.icons{
+			margin:0 auto;
+			margin-top:20px;
+			text-align:center;
+			.fa{
+				margin-right:20px;
+				margin-left:20px;
+				size: 1em;
+			}
+		}
+	}
+}
