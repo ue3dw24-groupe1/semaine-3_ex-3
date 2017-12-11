@@ -55,9 +55,7 @@ p.contenu{
   .bloc{
     display: inline-block;
     overflow: hidden;  
-    border-width:1px;
-    border-style:solid;
-    color:#DFDFDF;
+    border-radius: 2px;
     padding:auto;
     width:24%; 
     text-align: center;
@@ -83,9 +81,7 @@ p.contenu{
   .bloc{
     display: inline-block;
     overflow: hidden;  
-    border-width: 1px;
-    border-style: solid;
-    color: #DFDFDF;
+    border-radius: 2px;
     padding: auto;
     width: 24%;
     text-align: center; 
@@ -113,9 +109,7 @@ p.contenu{
     display: inline-block;
     margin-left: 0em;
     overflow: hidden;  
-    border-width: 1px;
-    border-style: solid;
-    color: #DFDFDF;
+    border-radius: 2px;
     width: 100%;
     text-align: center; 
 
