@@ -1,30 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { PopularComponent } from './popular/popular.component';
-import { SearchComponent } from './search/search.component';
-import { NewComponent } from './new/new.component';
-import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule }     from './app-routing.module';
+
+import { MoviesComponent } from './movies/movies.component';
+import { MoviesService } from './movies/movies.service';
+
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroService }         from './hero-detail/hero.service';
+import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HeroSearchService } from './hero-search/hero-search.service';
+
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent,
-    CarouselComponent,
-    MainContentComponent,
-    PopularComponent,
-    SearchComponent,
-    NewComponent,
-    FooterComponent
+    MoviesComponent, 
+    HeroDetailComponent, 
+    HeroesComponent, 
+    DashboardComponent, 
+    HeroSearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroService,
+    HeroSearchService,
+    MoviesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,14 @@
-import { GameTrackerPage } from './app.po';
+import { MovieSearchPage } from './app.po';
 
-describe('game-tracker App', () => {
-  let page: GameTrackerPage;
+describe('movie-search App', () => {
+  let page: MovieSearchPage;
 
   beforeEach(() => {
-    page = new GameTrackerPage();
+    page = new MovieSearchPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
