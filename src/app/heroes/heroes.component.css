@@ -1,0 +1,27 @@
+.delcon{
+  float:right !important;
+}
+.lshe{
+  display: block; 
+  width: 200px;
+  cursor: pointer; 
+  cursor: hand;
+}
+.addR{
+
+}
+
+.mdl-chip__action:hover{
+  color:#FF0000;
+  font-size: 18px;
+}
+
+#contList{
+	width: 300px;
+	height: 350px;
+	overflow-y: auto;
+
+}
+.mdl-textfield__input{
+  border-bottom: 1px solid #304ffe;
+}
