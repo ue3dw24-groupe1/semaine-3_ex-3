@@ -1,58 +1,20 @@
-
+<div class="wrap">
+  <div class="search">
+    <input type="text" class="rechercher" placeholder="Rechercher un jeu" #searchBox>
+      <button type="submit" (click)="searchMovies(searchBox.value)" class="boutonRecherche">
+        <i class="fa fa-search"></i>
+      </button>
+  </div>
+</div>
 
 <div class="container" id="search-component">
-  
-  <label for="search-box">
-    <h4>Movie Search</h4>
-  </label>
-  
-  <div class="input-group">
-    <input type="search" class="mdl-textfield__input" placeholder="Search..." #searchBox id="search-box" autofocus="true"/>
-      <button id="butSearch" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"  type="submit" (click)="searchMovies(searchBox.value)">Click</button>
-
-  </div>
 
   <div *ngIf="movieFound">
 
-
-<!--
-<style>
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
-
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div>
--->
     <div class="media movie-media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="{{moviePoster}}" alt="{{movie.Title}}">
+          <img class="media-object" src="{{moviePoster}}" alt="{{movie.Title}}" style="width: 100%; margin-left: -10px;">
         </a>
       </div>
       <div class="media-body">
@@ -79,5 +41,3 @@
   </div>
 
 </div>
-
-

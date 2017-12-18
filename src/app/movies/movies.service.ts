@@ -11,7 +11,7 @@ export class MoviesService {
   constructor(private http: Http) { }
 
   search(term: string): Observable<any> {
-    return this.http.get(this.omdb + term + '&plot=full&apikey=17cedea')
+    return this.http.get(this.omdb + term + '&apikey=73890898')
       .map(response => {
         return response.json() as string
     })
